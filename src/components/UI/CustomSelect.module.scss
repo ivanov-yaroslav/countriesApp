@@ -1,0 +1,24 @@
+.customSelect {
+    color: var(--colors-text);
+    max-width: 220px;
+    width: 100%;
+    box-shadow: var(--shadow);
+    background-color: var(--colors-ui-base);
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    min-height: 42px;
+
+
+    @media (max-width: 600px) {
+        max-width: none;
+    }
+
+
+    & * {
+        color: var(--colors-text) !important;
+        transition: all 0s ease 0s;
+    }
+}

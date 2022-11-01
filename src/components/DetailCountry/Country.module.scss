@@ -1,0 +1,13 @@
+@import '../../style/index';
+
+.country {
+    >a {
+        display: block;
+    }
+
+    > :not(:last-child) {
+        @include adaptiveValue("margin-bottom", 40, 30);
+    }
+
+    text-align: start;
+}
