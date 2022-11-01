@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link, useParams, useNavigate, Navigate } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
 
 import useRequest from '../../hooks/useRequest';
@@ -14,7 +14,7 @@ import style from './Country.module.scss';
 function Country(props) {
     const nameParams = useParams();
     const navigate = useNavigate();
-    const [dataCountry, loading, error] = useRequest(
+    const [dataCountries, loading, error] = useRequest(
         () => fetch(searchByCountry(nameParams.name)),
         nameParams
     );
@@ -27,7 +27,7 @@ function Country(props) {
             </div>
         ) : null,
         notFound:
-            !country.length || !dataCountry.length ? (
+            !country.length || !dataCountries.length ? (
                 <div className='status-block'>
                     <h2 className='status-title'>No country found :(</h2>
                 </div>
@@ -40,10 +40,10 @@ function Country(props) {
     };
 
     useEffect(() => {
-        if (dataCountry) {
-            setCountry(dataCountry);
+        if (dataCountries) {
+            setCountry(dataCountries.filter(dataCountry => dataCountry.name === nameParams.name));
         }
-    }, [dataCountry]);
+    }, [dataCountries]);
 
     return (
         <div className={style.country}>
