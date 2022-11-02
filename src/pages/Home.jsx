@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 import Control from '../components/Control/Control';
 import List from '../components/ListCards/List';
 

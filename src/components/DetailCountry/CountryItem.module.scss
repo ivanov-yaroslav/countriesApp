@@ -51,15 +51,15 @@
 
 .title {
     font-weight: 600;
-    @include adaptiveValue("font-size", 35, 25);
+    @include adaptiveValue("font-size", 35, 28);
 }
 
 .infoItem {
     font-weight: 800;
-    @include adaptiveValue("font-size", 18, 16);
+    @include adaptiveValue("font-size", 22, 18);
 
     &:not(:last-child) {
-        margin-bottom: 5px;
+        margin-bottom: 7px;
     }
 
     span {
@@ -88,7 +88,7 @@
     background-color: var(--colors-ui-base);
     box-shadow: var(--shadow);
     cursor: pointer;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .border {
@@ -99,7 +99,7 @@
 
 .borderTitle {
     font-weight: 800;
-    @include adaptiveValue("font-size", 18, 16);
+    @include adaptiveValue("font-size", 22, 18);
 
     span {
         font-weight: 300;
