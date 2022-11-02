@@ -9,6 +9,7 @@ import Details from './pages/Details';
 import './style/App.scss';
 
 function App() {
+    const [filter, setFilter] = useState({ search: '', region: '' });
     const [countries, setCountries] = useState([]);
 
     return (
@@ -16,7 +17,14 @@ function App() {
             <Route path='/' element={<Layout />}>
                 <Route
                     path=''
-                    element={<Home countries={countries} setCountries={setCountries} />}
+                    element={
+                        <Home
+                            countries={countries}
+                            setCountries={setCountries}
+                            filter={filter}
+                            setFilter={setFilter}
+                        />
+                    }
                 />
                 <Route path='country/:name' element={<Details />} />
                 <Route path='*' element={<NotFound />} />

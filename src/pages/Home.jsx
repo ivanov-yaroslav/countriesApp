@@ -3,9 +3,7 @@ import { useState } from 'react';
 import Control from '../components/Control/Control';
 import List from '../components/ListCards/List';
 
-export default function Home({ setCountries, countries }) {
-    const [filter, setFilter] = useState({ search: '', region: '' });
-
+export default function Home({ setCountries, countries, filter, setFilter }) {
     return (
         <div className='container'>
             <Control filter={filter} setFilter={setFilter} />
