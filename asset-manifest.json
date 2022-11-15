@@ -1,13 +1,14 @@
 {
   "files": {
     "main.css": "/countriesApp/static/css/main.20346e00.css",
-    "main.js": "/countriesApp/static/js/main.dc843672.js",
+    "main.js": "/countriesApp/static/js/main.4d9e19a8.js",
+    "static/media/Russian-Pig.jpg": "/countriesApp/static/media/Russian-Pig.de5d8e699f0659ef3478.jpg",
     "index.html": "/countriesApp/index.html",
     "main.20346e00.css.map": "/countriesApp/static/css/main.20346e00.css.map",
-    "main.dc843672.js.map": "/countriesApp/static/js/main.dc843672.js.map"
+    "main.4d9e19a8.js.map": "/countriesApp/static/js/main.4d9e19a8.js.map"
   },
   "entrypoints": [
     "static/css/main.20346e00.css",
-    "static/js/main.dc843672.js"
+    "static/js/main.4d9e19a8.js"
   ]
 }
