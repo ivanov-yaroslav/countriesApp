@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import { filterByCode } from '../../config';
+import countryRus from '../../img/Russian-Pig.jpg';
 
 import style from './CountryItem.module.scss';
 
@@ -23,8 +24,7 @@ function CountryItem({ country }) {
     } = country;
 
     if (name === 'Russian Federation') {
-        flags.svg =
-            'https://imgprx.livejournal.net/66466fe4090461aeb14dd130ca8a6d9f954fef4d/MGX22Vtmdftu1Zkbp8D7DEB68zd7WrsE_7kAiIxUn2KABcwYtVg-YKxwfZUwqdPI2Qqr6vl5Q1N1jl4lmwEPPG55zIX_nsKFKFfwezWW1X7rEymxbX0xOVAaf3rbx-JNl7qBfE-G-g4PDTEFm5HkFbxX5lhjw70eXnZGHSSBw98';
+        flags.svg = countryRus;
     }
 
     useEffect(() => {

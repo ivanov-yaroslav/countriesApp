@@ -43,7 +43,7 @@ function Country(props) {
         if (dataCountries) {
             setCountry(dataCountries.filter(dataCountry => dataCountry.name === nameParams.name));
         }
-    }, [dataCountries]);
+    }, [dataCountries, nameParams]);
 
     return (
         <div className={style.country}>
